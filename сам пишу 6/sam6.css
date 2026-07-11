@@ -1,0 +1,1185 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  padding: 20px 0;
+  background-color: #ffffff;
+  display: block;
+}
+
+.main {
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.header_logo {
+  margin-left: 20px;
+  width: 45px;
+  margin-right: 40px;
+}
+
+.header_logo_group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header_title {
+  font-weight: 900;
+  font-size: 23px;
+  margin-left: 10px;
+}
+
+.logo_green {
+  color: #b5ed3d;
+}
+
+.btn-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px;
+  height: 30px;
+}
+
+.btn-login:hover {
+  max-height: 50px;
+  filter: (100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.welcome {
+  gap: 10px;
+  padding-top: 50px;
+  padding: 80px 0;
+}
+
+.welcome .container {
+  gap: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.welcome_subtitle {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 120px;
+  font-weight: 600; /* Можешь подправить размер, если нужно */
+}
+
+.welcome_text {
+  max-width: 600px; /* Чтобы текст занимал примерно половину рамки */
+}
+
+.welcome_desc {
+  opacity: 0.8;
+  font-weight: 400;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+
+.loader {
+  position: relative;
+  width: 450px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, #b5ed3d, transparent);
+  overflow: hidden;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  translate: -200px 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #212121, transparent);
+  animation: slide 1.7s infinite;
+}
+
+@keyframes slide {
+  100% {
+    translate: 300px 0;
+  }
+}
+
+.welcome_subtitle {
+  font-size: 7rem; /* настройте размер под себя */
+  opacity: 0; /* изначально текст невидим */
+  animation: fadeInUp 2s ease-out forwards;
+}
+
+/* Описываем саму анимацию */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* смещение вниз на 20px */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* возвращаем в исходную позицию */
+  }
+}
+
+.main_photo2 {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+
+.main_photo2 .container {
+  display: flex !important; /* Включаем флекс, чтобы gap заработал */
+  flex-direction: row !important; /* Выстраиваем карточки в горизонтальный ряд */
+  gap: 40px !important; /* Расстояние между карточками */
+  justify-content: center; /* Центрируем всю группу карточек */
+  align-items: center;
+  width: 100%;
+}
+
+.card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполнит карточку без искажения пропорций */
+}
+
+.card-1 {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
+
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 190px;
+  height: 240px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #b5ed3d;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.welcome1 .container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.welcome_title1 {
+  font-weight: 400;
+}
+
+.welcome_desc1 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 60px;
+  line-height: 1.5;
+}
+
+.welcome_buttons {
+  background-color: #000000; /* Черный цвет */
+  padding: 80px 0; /* Внутренние отступы, чтобы секция не сжималась */
+}
+
+.welcome_buttons .container {
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+
+.welcome_title2 {
+  color: #ffffff;
+  font-size: 25px;
+  margin-bottom: 40px; /* Отступ от заголовка до кнопок */
+  font-weight: 300;
+}
+
+.welcome_buttons .container {
+  flex-direction: column;
+  align-items: flex-start; /* Прижимает всё к левому краю */
+}
+
+.buttons_grid {
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем кнопкам переноситься на новую строку */
+  gap: 20px; /* Расстояние между кнопками как по горизонтали, так и по вертикали */
+  width: 100%;
+}
+
+.buttons_grid button {
+  width: calc((100% - 40px) / 3);
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border-radius: 10em;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid white;
+  box-shadow: 0 0 0 0 black;
+  box-sizing: border-box; /* Важно, чтобы паддинги не раздували кнопку */
+}
+
+.buttons_grid button:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 white;
+}
+
+.buttons_grid button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.welcome_select .container {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.welcome_subtitle_1 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.welcome_desc_1 {
+  opacity: 0.5;
+}
+
+.container {
+  display: flex; /* Выстраивает картинку и текст в один ряд */
+  align-items: center; /* Выравнивает их строго по центру относительно друг друга по вертикали */
+}
+
+.welcome_card_img {
+  object-fit: contain; /* Картинка заполнит карточку без искажения пропорций */
+  height: 580px;
+  width: 580px;
+  margin-bottom: 30px;
+}
+
+.welcome_left_block {
+  display: flex;
+  flex-direction: column; /* Выстраивает картинку и кнопку строго друг под другом */
+  gap: 25px; /* Регулирует отступ между низом картинки и кнопкой */
+}
+
+.welcome_desc_2 {
+  opacity: 0.5;
+  margin-bottom: 80px;
+}
+
+.welcome_subtitle_2 {
+  margin-bottom: 30px;
+}
+
+.welcome_buttons_1 {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #8f9092;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow:
+    0 4px 3px 1px #fcfcfc,
+    0 6px 8px #d6d7d9,
+    0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe,
+    inset 0 0 3px 3px #cecfd1;
+}
+
+.btn:active {
+  box-shadow:
+    0 4px 3px 1px #fcfcfc,
+    0 6px 8px #d6d7d9,
+    0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe,
+    inset 0 0 5px 3px #999,
+    inset 0 0 30px #aaa;
+}
+
+.btn:focus {
+  box-shadow:
+    0 4px 3px 1px #fcfcfc,
+    0 6px 8px #d6d7d9,
+    0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe,
+    inset 0 0 5px 3px #999,
+    inset 0 0 30px #aaa;
+}
+
+.welcome_card_img-1 {
+  object-fit: contain;
+  height: 530px;
+  width: 530px;
+  margin-bottom: 10px;
+}
+
+.welcome_card_img-2 {
+  object-fit: contain;
+  height: 530px;
+  width: 530px;
+  margin-bottom: 50px;
+}
+
+.works_section {
+  padding: 40px 0;
+}
+
+.works_title {
+  font-family: sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000000;
+  margin: 0;
+}
+
+.title_left {
+  align-self: flex-start;
+}
+
+.title_right {
+  align-self: flex-end; /* Прижимает этот блок к самому низу контейнера */
+}
+
+.circle_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px; /* Обязательно одинаковая ширина и высота */
+  height: 140px;
+  border-radius: 50%;
+  background-color: #b5ed3d;
+  color: #000000; /* Цвет текста внутри круга */
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none; /* Убирает подчеркивание ссылки */
+  transition: transform 0.2s ease; /* Плавность при наведении */
+}
+
+.circle_btn:hover {
+  transform: scale(1.05); /* Круг слегка увеличится */
+}
+
+.welcome_select-3 {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.welcome_text-3 {
+  text-align: center;
+  width: 100%;
+}
+
+.welcome_subtitle_3 {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cards_section {
+  position: relative;
+  padding: 10px 0; /* Отступы сверху и снизу для всей секции */
+  background-color: #ffffff; /* Легкий фоновый цвет секции */
+}
+
+.cards_section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: wrap; /* Разрешаем перенос на новые строки для мобилок */
+  justify-content: center; /* Центрирует карточки на экране */
+  gap: 30px; /* Делает одинаковые аккуратные отступы между карточками во все стороны */
+}
+
+.tailwind-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 360px;
+  height: 380px;
+  background-color: #ffffff;
+  background-clip: border-box;
+  border-radius: 0.75rem;
+  color: #374151;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  margin-top: 24px;
+}
+
+.card-body {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.375;
+  color: #212529;
+}
+
+.card-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: inherit;
+}
+
+.rating:not(:checked) > input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 30px;
+  color: #666;
+}
+
+.rating:not(:checked) > label:before {
+  content: "★";
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723;
+}
+
+.photos {
+  background-color: #ffffff;
+  padding: 130px 0 80px 0;
+}
+
+.logos_row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.logos_row img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+.logos_row img {
+  max-height: 50px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.company_logo {
+  width: 150px;
+  object-fit: contain;
+}
+
+.company_logo2 {
+  width: 40px;
+}
+
+.company_logo3 {
+  width: 100px;
+}
+
+.footer {
+  background-color: #b5ed3d;
+  padding: 10px 0;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between; /* Лого влево, меню вправо */
+  align-items: center !important;
+  align-items: flex-start;
+  margin-bottom: 0px; /* Отступ перед нижней частью */
+  width: 100%;
+}
+
+.teamollo {
+  padding: 20px 0;
+  font-weight: 300;
+}
+
+.footer_link {
+  text-decoration: none;
+  color: #1a1a1a; /* Почти черный */
+  font-size: 16px;
+  font-weight: 300; /* Делаем жирным как на фото */
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer_link:hover {
+  opacity: 0.8; /* Логотипы партнеров обычно делают бледнее */
+}
+
+.footer_menu {
+  display: flex;
+  gap: 30px; /* Расстояние между ссылками внизу */
+}
+
+.btn-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background: #ffffff !important;
+  border: 1px solid #ffffff !important;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000 !important;
+  transition: all 0.2s ease;
+}
+
+.btn-1:hover {
+  box-shadow:
+    0 4px 3px 1px #fcfcfc,
+    0 6px 8px #d6d7d9,
+    0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe,
+    inset 0 0 3px 3px #cecfd1;
+}
+
+.btn-1:active {
+  box-shadow:
+    0 4px 3px 1px #fcfcfc,
+    0 6px 8px #d6d7d9,
+    0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe,
+    inset 0 0 5px 3px #999,
+    inset 0 0 30px #aaa;
+}
+
+.btn-1:focus {
+  box-shadow:
+    0 4px 3px 1px #fcfcfc,
+    0 6px 8px #d6d7d9,
+    0 -4px 4px #cecfd1,
+    0 -6px 4px #fefefe,
+    inset 0 0 5px 3px #999,
+    inset 0 0 30px #aaa;
+}
+
+.welcome_buttons_1 {
+  margin-top: 15px !important; /* Уменьшаем отступ до минимума, чтобы кнопка встала вплотную */
+}
+
+.subscribe_text {
+  margin-bottom: 0 !important;
+  font-size: 130px; /* Увеличиваем размер букв */
+  font-weight: 400; /* Делаем его менее жирным (обычным/light) */
+  letter-spacing: -2px; /* Слегка сближаем буквы для стиля как на макете */
+  line-height: 0.95; /* Поджимаем строки, чтобы заголовок смотрелся цельно */
+}
+
+.footer_nav {
+  display: flex;
+  gap: 80px; /* Расстояние между колонками Our Story, Pet Care и т.д. */
+}
+
+/* Общие правки для меню, чтобы убрать точки (маркеры) */
+.footer_nav ul {
+  list-style: none; /* Убирает точки у списков */
+  padding: 0;
+}
+
+.footer_nav a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Линия */
+.footer_line {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 40px 0 20px;
+}
+
+/* НИЖНЯЯ ЧАСТЬ */
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer_copy {
+  display: flex;
+  gap: 40px; /* Расстояние между ссылками внизу */
+  font-size: 16px;
+  color: #1a1a1a; /* Почти черный */
+  font-weight: 600; /* Делаем жирным как на фото */
+}
+
+.footer_copy a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+/* ИКОНКИ СОЦСЕТЕЙ */
+.footer_socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_socials img {
+  width: 28px; /* Чуть крупнее, как на макете */
+  height: 28px;
+  filter: brightness(0); /* Сделает иконки чисто черными */
+  opacity: 0.8;
+}
+
+.footer_socials-icons img:hover {
+  transform: scale(1.3);
+}
+
+.card {
+  max-width: fit-content;
+  border-radius: 15px;
+  display: flex;
+  overflow: visible !important;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  gap: 1rem;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.192),
+    inset 0 0 5px rgba(255, 255, 255, 0.274),
+    0 5px 5px rgba(0, 0, 0, 0.164);
+  transition: 0.5s;
+}
+
+.card:hover {
+  animation: ease-out 5s;
+  background: rgba(173, 173, 173, 0.05);
+}
+
+.card ul {
+  padding: 1.5rem 1rem; /* Оптимальные отступы внутри */
+  display: flex;
+  list-style: none;
+  gap: 1.5rem; /* Расстояние между кнопками по вертикали */
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column; /* Оставляем строго вертикально */
+}
+
+.card ul li {
+  cursor: pointer;
+}
+
+.svg {
+  transition: all 0.3s;
+  padding: 0;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  color: rgb(0, 157, 162); /* Твой бирюзовый цвет иконок */
+  fill: currentColor;
+
+  /* УБИРАЕМ белую подложку и тени, которые создавали круги: */
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.btn-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.text {
+  opacity: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  transition: all 0.3s;
+  color: rgb(0, 157, 162);
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  z-index: 9999;
+  box-shadow:
+    -5px 0 1px rgba(153, 153, 153, 0.2),
+    -10px 0 1px rgba(153, 153, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5),
+    0 5px 5px rgba(0, 0, 0, 0.082);
+}
+
+.iso-pro {
+  transition: 0.5s;
+}
+.iso-pro:hover a > .svg {
+  transform: translate(15px, -15px);
+  border-radius: 100%;
+}
+
+.iso-pro:hover .text {
+  opacity: 1;
+  transform: translate(25px, -2px) skew(-5deg);
+}
+
+.iso-pro:hover .svg {
+  transform: translate(5px, -5px);
+}
+
+.iso-pro span {
+  opacity: 0;
+  position: absolute;
+  color: #1877f2;
+  border-color: #1877f2;
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.3),
+    inset 0 0 5px rgba(255, 255, 255, 0.5),
+    0 5px 5px rgba(0, 0, 0, 0.164);
+  border-radius: 50%;
+  transition: all 0.3s;
+  height: 60px;
+  width: 60px;
+}
+
+.iso-pro:hover span {
+  opacity: 1;
+}
+
+.iso-pro:hover span:nth-child(1) {
+  opacity: 0.2;
+}
+
+.iso-pro:hover span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate(5px, -5px);
+}
+
+.iso-pro:hover span:nth-child(3) {
+  opacity: 0.6;
+  transform: translate(10px, -10px);
+}
+
+/* МЕДИА ЗАПРОСЫ ДЛЯ ПЛАНШЕТОВ (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .welcome_subtitle {
+    font-size: 5rem;
+  }
+
+  .welcome_card_img,
+  .welcome_card_img-1,
+  .welcome_card_img-2 {
+    height: 400px;
+    width: 400px;
+  }
+
+  .loader {
+    width: 300px;
+  }
+
+  .welcome .container {
+    gap: 50px;
+  }
+
+  .buttons_grid button {
+    width: calc((100% - 20px) / 2);
+    font-size: 18px;
+  }
+
+  .subscribe_text {
+    font-size: 80px;
+  }
+
+  .footer_nav {
+    gap: 40px;
+  }
+
+  .logos_row {
+    max-width: 450px;
+  }
+}
+
+/* МЕДИА ЗАПРОСЫ ДЛЯ ТЕЛЕФОНОВ (до 768px) */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .header_logo {
+    margin-left: 0;
+    margin-right: 10px;
+    width: 35px;
+  }
+
+  .header_title {
+    font-size: 18px;
+    margin-left: 5px;
+  }
+
+  .btn-login {
+    width: 80px;
+    height: 25px;
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .welcome_subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .welcome_text {
+    max-width: 100%;
+  }
+
+  .welcome_desc {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .loader {
+    width: 200px;
+  }
+
+  .welcome .container {
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+
+  .main_photo2 {
+    padding: 50px 0;
+  }
+
+  .main_photo2 .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-1 {
+    width: 150px;
+    height: 190px;
+  }
+
+  .bg {
+    width: 140px;
+    height: 180px;
+  }
+
+  .welcome_desc1 {
+    font-size: 20px;
+  }
+
+  .welcome_buttons .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .welcome_title2 {
+    font-size: 18px;
+  }
+
+  .buttons_grid {
+    gap: 15px;
+  }
+
+  .buttons_grid button {
+    width: 100%;
+    font-size: 16px;
+    padding: 0.8em 1.5em;
+  }
+
+  .welcome_card_img,
+  .welcome_card_img-1,
+  .welcome_card_img-2 {
+    height: 280px;
+    width: 280px;
+  }
+
+  .welcome_select .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .welcome_subtitle_1 {
+    font-size: 24px;
+  }
+
+  .welcome_left_block {
+    gap: 15px;
+  }
+
+  .welcome_desc_2 {
+    margin-bottom: 40px;
+  }
+
+  .welcome_buttons_1 {
+    gap: 8px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .works_section {
+    padding: 20px 0;
+  }
+
+  .works_title {
+    font-size: 28px;
+  }
+
+  .circle_btn {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .welcome_select-3 {
+    padding: 50px 15px;
+  }
+
+  .welcome_subtitle_3 {
+    font-size: 24px;
+  }
+
+  .cards_section .container {
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .tailwind-card {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .photos {
+    padding: 50px 0 40px 0;
+  }
+
+  .logos_row {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .logos_row img {
+    max-height: 40px;
+  }
+
+  .company_logo {
+    width: 100px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+  }
+
+  .footer_top {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .footer_menu {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer_line {
+    margin: 20px 0 15px;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .footer_copy {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .footer_socials {
+    gap: 15px;
+  }
+
+  .footer_socials img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer_nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer_nav a {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .subscribe_text {
+    font-size: 50px;
+    letter-spacing: -1px;
+  }
+
+  .card ul {
+    padding: 1rem 0.8rem;
+    gap: 1rem;
+  }
+
+  .svg {
+    height: 35px;
+    width: 35px;
+  }
+
+  .btn-1 {
+    width: 130px;
+    height: 40px;
+    font-size: 12px;
+  }
+}
